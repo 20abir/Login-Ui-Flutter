@@ -29,93 +29,95 @@ class MyLogin extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * .5,
-                  right: 35,
-                  left: 35),
-              child: Column(
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Enter Email',
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      hintText: 'Email',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * .5,
+                    right: 35,
+                    left: 35),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Enter Email',
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        hintText: 'Email',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 30),
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Enter Password',
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      hintText: 'Password',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                    const SizedBox(height: 30),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: 'Enter Password',
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        hintText: 'Password',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 40),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Sign In',
-                        style: TextStyle(
-                          color: Color(0xff4c505b),
-                          fontSize: 27,
-                          fontWeight: FontWeight.w700,
+                    const SizedBox(height: 40),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Sign In',
+                          style: TextStyle(
+                            color: Color(0xff4c505b),
+                            fontSize: 27,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
-                      ),
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundColor: Color(0xff4c505b),
-                        child: IconButton(
-                            color: Colors.white,
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_forward)),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 40),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MyRegister(),
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4c505b),
+                          child: IconButton(
+                              color: Colors.white,
+                              onPressed: () {},
+                              icon: Icon(Icons.arrow_forward)),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 40),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MyRegister(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 18,
+                              color: Color(0xff4c505b),
                             ),
-                          );
-                        },
-                        child: Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 18,
-                            color: Color(0xff4c505b),
                           ),
                         ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Forgot Password",
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 18,
-                            color: Color(0xff4c505b),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Forgot Password",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 18,
+                              color: Color(0xff4c505b),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
